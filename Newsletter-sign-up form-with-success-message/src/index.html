@@ -11,6 +11,56 @@
       href="../scss/style.scss" />
   </head>
   <body>
-    hello world
+    <main>
+      <section class="newsletter">
+        <div class="newsletter__content">
+          <header class="newsletter__header">
+            <h1 class="newsletter__title">Stay updated!</h1>
+            <p class="newsletter__subtitle">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+          </header>
+
+          <ul class="newsletter__list">
+            <li class="newsletter__item">
+              Product discovery and building what matters
+            </li>
+            <li class="newsletter__item">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="newsletter__item">And much more!</li>
+          </ul>
+
+          <form
+            class="newsletter__form"
+            action="#">
+            <div class="newsletter__form-group">
+              <label
+                for="email"
+                class="newsletter__label visually-hidden"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="newsletter__input"
+                placeholder="email@company.com"
+                required />
+              <button
+                type="submit"
+                class="newsletter__submit">
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
+        </div>
+        <figure class="newsletter__illustration">
+          <img
+            src="../assets/images/illustration-sign-up-mobile.svg"
+            alt="Illustration of a productivity graph"
+            class="newsletter__image" />
+        </figure>
+      </section>
+    </main>
   </body>
 </html>
