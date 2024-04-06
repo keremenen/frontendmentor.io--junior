@@ -22,6 +22,9 @@
 /dist
 */dist
 
+#parcel-cache
+*/.parcel-cache
+
 # misc
 .DS_Store
 *.pem
