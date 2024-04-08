@@ -12,7 +12,9 @@
   </head>
   <body>
     <main>
-      <section class="newsletter">
+      <section
+        class="newsletter"
+        style="display: none">
         <div class="newsletter__content">
           <header class="newsletter__header">
             <h1 class="newsletter__title">Stay updated!</h1>
@@ -60,6 +62,25 @@
             alt="Illustration of a productivity graph"
             class="newsletter__image" />
         </figure>
+      </section>
+      <section class="success-modal">
+        <div class="success-modal__content">
+          <figure class="success-modal__image-wrapper">
+            <img
+              class="success-modal__image"
+              src="../assets/images/icon-success.svg"
+              alt="Tick stamp on orange background" />
+          </figure>
+          <header class="success-modal__header">
+            <h1 class="success-modal__title">Thanks for subscribing!</h1>
+            <p class="success-modal__info">
+              A confirmation email has been sent to
+              <strong>ash@loremcompany.com</strong>. Please open it and click
+              the button inside to confirm your subscription
+            </p>
+          </header>
+          <button class="success-modal__btn">Dismiss message</button>
+        </div>
       </section>
     </main>
   </body>

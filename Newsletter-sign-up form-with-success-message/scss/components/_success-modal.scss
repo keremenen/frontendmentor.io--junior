@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+
+.success-modal {
+  height: 100vh;
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    gap: 40px;
+  }
+
+  &__image-wrapper {
+    margin-top: auto;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__title {
+    @include text-heading($dark-navy);
+  }
+  &__info {
+    @include text-body-regular($dark-navy);
+
+    strong {
+      @include text-body-bold($dark-navy);
+    }
+  }
+
+  &__btn {
+    @include text-body-bold($white);
+    margin-top: auto;
+    background-color: $dark-navy;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 0 14px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+  }
+}
