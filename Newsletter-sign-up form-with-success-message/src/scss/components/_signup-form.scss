@@ -51,7 +51,7 @@
 
     &::before {
       content: '';
-      background-image: url('../assets/images/icon-success.svg');
+      background-image: url('../../assets/images/icon-success.svg');
       background-size: contain;
       height: 21px;
       width: 21px;
@@ -116,7 +116,7 @@
     height: 17.75rem;
     width: 100%;
     overflow: hidden;
-    background-image: url('../assets/images/illustration-sign-up-mobile.svg');
+    background-image: url('../../assets/images/illustration-sign-up-mobile.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 100%;
@@ -126,7 +126,7 @@
       height: auto;
       max-width: 25rem;
       border-radius: 1rem;
-      background-image: url('../assets/images/illustration-sign-up-desktop.svg');
+      background-image: url('../../assets/images/illustration-sign-up-desktop.svg');
     }
   }
 }
