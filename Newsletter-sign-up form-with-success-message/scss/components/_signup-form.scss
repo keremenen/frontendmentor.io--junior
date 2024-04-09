@@ -65,13 +65,35 @@
     margin-top: 2.5rem;
   }
 
+  &__form.error &__input {
+    background-color: rgba($vermellion, 0.15);
+    border: 1px solid $vermellion;
+    color: $vermellion;
+
+    &::placeholder {
+      color: $vermellion;
+    }
+  }
+
   &__form-group {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   &__label {
     @include text-body-small($dark-navy);
+  }
+
+  &__error-message {
+    @include text-body-small($vermellion);
+    position: absolute;
+    right: 0;
+    display: none;
+  }
+
+  &__form.error &__error-message {
+    display: block;
   }
 
   &__input {
