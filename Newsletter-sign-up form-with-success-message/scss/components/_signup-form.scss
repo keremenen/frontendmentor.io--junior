@@ -87,13 +87,7 @@
   &__submit {
     @include text-body-bold($white);
     @extend %button;
-    background-color: $dark-navy;
     margin-top: 1.5rem;
-  }
-  &__submit:hover,
-  &__submit:focus {
-    background: $gradient;
-    box-shadow: 0 16px 32px 0 rgba($vermellion, 0.5);
   }
 
   &__illustration {

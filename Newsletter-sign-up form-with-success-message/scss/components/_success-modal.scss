@@ -2,6 +2,13 @@
 
 .success-modal {
   height: 100vh;
+  background-color: $white;
+
+  @include breakpoint(desktop) {
+    max-width: 31.5rem;
+    height: unset;
+    border-radius: 36px;
+  }
 
   &__content {
     height: 100%;
@@ -9,7 +16,11 @@
     flex-direction: column;
     justify-content: center;
     padding: 2.5rem 1.5rem;
-    gap: 40px;
+    gap: 2.5rem;
+
+    @include breakpoint(desktop) {
+      padding: 3rem 4rem 4rem 4rem;
+    }
   }
 
   &__image-wrapper {
@@ -19,7 +30,7 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
   }
   &__title {
     @include text-heading($dark-navy);
@@ -35,7 +46,6 @@
   &__btn {
     @include text-body-bold($white);
     @extend %button;
-    background-color: $dark-navy;
     margin-top: auto;
   }
 }

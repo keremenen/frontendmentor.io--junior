@@ -1,7 +1,16 @@
+@use './variables' as *;
+
 %button {
   border: none;
   border-radius: 8px;
   padding: 18px 0 14px;
   letter-spacing: -0.5px;
+  background: $dark-navy;
   cursor: pointer;
+  transition: box-shadow 200ms ease-out;
+
+  &:hover {
+    background: $gradient;
+    box-shadow: 0 16px 32px 0 rgba($vermellion, 0.5);
+  }
 }
