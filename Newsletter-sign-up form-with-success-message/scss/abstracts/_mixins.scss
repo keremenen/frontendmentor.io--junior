@@ -1,7 +1,9 @@
+$mobile: 480px;
 $tablet: 768px;
 $desktop: 1440px;
 
 $breakpoints: (
+  'mobile': $mobile,
   'tablet': $tablet,
   'desktop': $desktop,
 );
@@ -18,7 +20,7 @@ $breakpoints: (
   font-weight: 700;
   color: $color;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     font-size: 3.5rem;
   }
 }

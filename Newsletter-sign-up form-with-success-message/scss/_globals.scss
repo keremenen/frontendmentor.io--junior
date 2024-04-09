@@ -1,3 +1,5 @@
+@use './abstracts/' as *;
+
 html {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -5,9 +7,19 @@ html {
   line-height: 28px;
 }
 
+body {
+  background-color: $pale-navy;
+}
+
 main {
   display: flex;
   justify-content: center;
+  min-height: 100vh;
+  align-items: start;
+
+  @include breakpoint(desktop) {
+    align-items: center;
+  }
 }
 
 .hidden {
