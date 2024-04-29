@@ -15,15 +15,16 @@ const setupTheme = (theme) => {
 }
 
 const initTheme = () => {
-  page.classList.remove('dark-theme', 'light-theme')
-
+  //Get current browser theme. If your browser doesn't have a theme option, it will get your device's theme.
   const currentDeviceTheme = window.matchMedia('(prefers-color-scheme: dark)')
     .matches
     ? 'dark-theme'
     : 'light-theme'
 
+  //Get localStorage theme info
   const currentLocalStorageTheme = localStorage.getItem('theme')
 
+  // If localStorage theme key exists, then select the appropriate theme and skip the selection based on browser or devices settings.
   if (currentLocalStorageTheme) {
     currentLocalStorageTheme === 'dark-theme'
       ? setupTheme('dark-theme')
@@ -31,9 +32,7 @@ const initTheme = () => {
     return
   }
 
-  console.log(`device theme: ${currentDeviceTheme}`)
-  console.log(`localSorage theme: ${currentLocalStorageTheme}`)
-
+  // If localStorage theme key does not exists, then setup appropriate theme based on browser or device settings.
   currentDeviceTheme === 'dark-theme'
     ? setupTheme('dark-theme')
     : setupTheme('light-theme')
