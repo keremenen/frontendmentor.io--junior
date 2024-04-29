@@ -2,7 +2,7 @@
 @include themify($themes) {
   .search-form {
     margin: 2.25rem 0 1rem;
-    background: themed('component-background');
+    background: themed('background-secondary');
     border-radius: 15px;
     padding: 0.375rem 0.4375rem 0.4688rem 1rem;
     display: flex;
@@ -18,7 +18,7 @@
       border: none;
       font-family: inherit;
       font-size: 0.8125rem;
-      color: themed('text');
+      color: themed('txt-mid-contrast');
       margin: 0.125rem 0.5rem 0 0.4375rem;
       line-height: 1.5625rem;
       outline: none;
@@ -27,7 +27,7 @@
     &__button {
       font-family: inherit;
       color: $white;
-      background-color: $lm-blue;
+      background-color: themed('primary');
       border: none;
       font-size: 0.875rem;
       font-weight: 700;

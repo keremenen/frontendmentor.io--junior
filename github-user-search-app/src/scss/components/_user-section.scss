@@ -1,7 +1,7 @@
 @use '../abstracts/' as *;
 @include themify($themes) {
   .user-section {
-    background: themed('component-background');
+    background: themed('background-secondary');
     border-radius: 15px;
     padding: 2rem 1.5rem 3rem;
     box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
@@ -14,17 +14,17 @@
         font-size: 1rem;
         font-weight: 700;
         line-height: 1.5625rem;
-        color: themed('text-secondary');
+        color: themed('txt-high-contrast');
       }
       &__user-username {
-        color: $lm-blue;
+        color: themed('primary');
         line-height: 1.1875rem;
         font-size: 0.8125rem;
         margin-bottom: 0.375rem;
       }
       &__user-joined-time {
         line-height: 1.1875rem;
-        color: themed('text-alt');
+        color: themed('txt-low-contrast');
         font-size: 0.8125rem;
       }
     }
@@ -32,14 +32,14 @@
     .user-bio {
       font-size: 0.8125rem;
       line-height: 1.5625rem;
-      color: themed('text');
+      color: themed('txt-mid-contrast');
       margin: 2rem 0 1.4375rem 0;
     }
 
     .user-stats {
       display: flex;
       border-radius: 10px;
-      background: themed('page-background');
+      background: themed('background');
       padding: 18px 15px;
       justify-content: space-between;
       margin-bottom: 1.5rem;
@@ -50,7 +50,7 @@
 
       &__header {
         font-size: 0.6875rem;
-        color: themed('text');
+        color: themed('txt-mid-contrast');
         line-height: 1rem;
         text-align: center;
       }
@@ -60,7 +60,7 @@
         text-align: center;
         font-size: 1rem;
         font-weight: 700;
-        color: themed('text-secondary');
+        color: themed('txt-high-contrast');
         line-height: 1.5rem;
       }
     }
@@ -84,7 +84,7 @@
       }
       &__value {
         font-size: 0.8125rem;
-        color: themed('text');
+        color: themed('txt-mid-contrast');
         line-height: 1.1875rem;
       }
     }

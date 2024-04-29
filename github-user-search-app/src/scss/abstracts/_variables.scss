@@ -1,30 +1,34 @@
-// LIGHT THEME COLORS
+//Global colors
 
-$lm-blue: #0079ff;
-$lm-gray: #697c9a;
-$lm-gray-blue: #4b6a9b;
-$lm-navy: #2b3442;
-$lm-light-gray: #f6f8ff;
-$lm-white: #fefefe;
 $white: #fff;
+
+//Theme colors
 
 $themes: (
   light: (
     primary: #0079ff,
-    page-background: #f6f8ff,
-    component-background: #fefefe,
-    text: #4b6a9b,
-    text-secondary: #2b3442,
-    text-alt: #697c9a,
+    primary-hover: #60abff,
+
+    background: #f6f8ff,
+    background-secondary: #fefefe,
+
+    txt-high-contrast: #2b3442,
+    txt-mid-contrast: #4b6a9b,
+    txt-low-contrast: #697c9a,
+
     logo: #222731,
   ),
   dark: (
     primary: #0079ff,
-    page-background: #141d2f,
-    component-background: #1e2a47,
-    text: #ffffff,
-    text-alt: #fff,
-    text-secondary: #ffffff,
+    primary-hover: #60abff,
+
+    background: #141d2f,
+    background-secondary: #1e2a47,
+
+    txt-high-contrast: #fff,
+    txt-mid-contrast: #ffff,
+    txt-low-contrast: #fff,
+
     logo: #fff,
   ),
 );
