@@ -4,7 +4,8 @@
   *,
   *::after,
   *::before {
-    transition: background 350ms ease-in-out, color 350ms ease-in-out;
+    transition: color 250ms ease-in-out, background 250ms ease-in-out,
+      fill 250ms ease-in-out;
   }
   html {
     font-weight: 400;
@@ -15,7 +16,7 @@
     font-family: 'Space Mono', monospace;
     display: flex;
     justify-content: center;
-    background-color: themed('background');
+    background: themed('background');
   }
 
   .container {
