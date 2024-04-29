@@ -1,19 +1,20 @@
 @use './abstracts/' as *;
 
-html {
-  font-family: 'Space Mono', monospace;
-  font-weight: 400;
-  font-style: normal;
-}
+@include themify($themes) {
+  html {
+    font-weight: 400;
+    font-style: normal;
+  }
 
-body {
-  background-color: $lm-light-gray;
-  display: flex;
-  justify-content: center;
-  // align-items: center;
-}
+  body {
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    justify-content: center;
+    background-color: themed('page-background');
+  }
 
-.container {
-  max-width: 20.4375rem;
-  margin: 31px 24px;
+  .container {
+    max-width: 20.4375rem;
+    margin: 31px 24px;
+  }
 }

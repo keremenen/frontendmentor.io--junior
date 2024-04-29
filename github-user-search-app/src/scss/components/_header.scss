@@ -1,23 +1,24 @@
 @use '../abstracts/' as *;
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__logo {
-    font-size: 1.625rem;
-    font-weight: 700;
-    color: $lm-navy;
-    line-height: 2.375rem;
-  }
-  &__theme-switcher {
-    color: $lm-gray;
-    font-weight: 700;
-    font-size: 0.8125rem;
-    letter-spacing: 0.1563rem;
+@include themify($themes) {
+  .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.8125rem;
+
+    &__logo {
+      font-size: 1.625rem;
+      font-weight: 700;
+      color: themed('logo');
+      line-height: 2.375rem;
+    }
+    &__theme-switcher {
+      color: themed('text-alt');
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.1563rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8125rem;
+    }
   }
 }

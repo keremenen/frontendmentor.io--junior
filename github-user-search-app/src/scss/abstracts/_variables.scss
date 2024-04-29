@@ -7,3 +7,24 @@ $lm-navy: #2b3442;
 $lm-light-gray: #f6f8ff;
 $lm-white: #fefefe;
 $white: #fff;
+
+$themes: (
+  light: (
+    primary: #0079ff,
+    page-background: #f6f8ff,
+    component-background: #fefefe,
+    text: #4b6a9b,
+    text-secondary: #2b3442,
+    text-alt: #697c9a,
+    logo: #222731,
+  ),
+  dark: (
+    primary: #0079ff,
+    page-background: #141d2f,
+    component-background: #1e2a47,
+    text: #ffffff,
+    text-alt: #fff,
+    text-secondary: #ffffff,
+    logo: #fff,
+  ),
+);
