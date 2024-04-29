@@ -1,6 +1,11 @@
 @use './abstracts/' as *;
 
 @include themify($themes) {
+  *,
+  *::after,
+  *::before {
+    transition: background 350ms ease-in-out, color 350ms ease-in-out;
+  }
   html {
     font-weight: 400;
     font-style: normal;

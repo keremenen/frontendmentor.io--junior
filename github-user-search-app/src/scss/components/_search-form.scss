@@ -27,7 +27,7 @@
     &__button {
       font-family: inherit;
       color: $white;
-      background-color: themed('primary');
+      background: themed('primary');
       border: none;
       font-size: 0.875rem;
       font-weight: 700;
@@ -37,7 +37,7 @@
       transition: all 0.2s ease-out;
 
       &:hover {
-        background-color: themed('primary-hover');
+        background: themed('primary-hover');
       }
     }
   }
