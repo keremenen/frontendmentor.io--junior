@@ -1,5 +1,18 @@
 const page = document.documentElement
 const toggleThemeButton = document.querySelector('.header__theme-switcher')
+const themeLabel = document.querySelector('.header__theme-label')
+
+const setupTheme = (theme) => {
+  if (theme === 'dark-theme') {
+    page.classList.remove('light-theme')
+    page.classList.add('dark-theme')
+    themeLabel.innerText = 'LIGHT'
+  } else {
+    page.classList.remove('dark-theme')
+    page.classList.add('light-theme')
+    themeLabel.innerText = 'DARK'
+  }
+}
 
 const initTheme = () => {
   page.classList.remove('dark-theme', 'light-theme')
@@ -13,8 +26,8 @@ const initTheme = () => {
 
   if (currentLocalStorageTheme) {
     currentLocalStorageTheme === 'dark-theme'
-      ? page.classList.add('dark-theme')
-      : page.classList.add('light-theme')
+      ? setupTheme('dark-theme')
+      : setupTheme('light-theme')
     return
   }
 
@@ -22,8 +35,8 @@ const initTheme = () => {
   console.log(`localSorage theme: ${currentLocalStorageTheme}`)
 
   currentDeviceTheme === 'dark-theme'
-    ? page.classList.add('dark-theme')
-    : page.classList.add('light-theme')
+    ? setupTheme('dark-theme')
+    : setupTheme('light-theme')
 }
 
 const handleToggleTheme = () => {
@@ -34,13 +47,11 @@ const handleToggleTheme = () => {
 
   if (currentTheme === 'dark-theme') {
     //Change theme to light
-    page.classList.remove('dark-theme')
-    page.classList.add('light-theme')
+    setupTheme('light-theme')
     localStorage.setItem('theme', 'light-theme')
   } else {
     //Change theme to light
-    page.classList.remove('light-theme')
-    page.classList.add('dark-theme')
+    setupTheme('dark-theme')
     localStorage.setItem('theme', 'dark-theme')
   }
 }

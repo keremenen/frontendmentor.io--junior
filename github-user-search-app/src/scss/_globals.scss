@@ -1,7 +1,7 @@
 @use './abstracts/' as *;
 
 .transition-enabled * {
-  transition: all 350ms ease-in-out;
+  transition: all 550ms ease-in-out;
 }
 @include themify($themes) {
   html {
