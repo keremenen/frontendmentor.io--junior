@@ -45,6 +45,7 @@
           <div class="user-header__image-wrapper">
             <img
               src="../assets/user-profile-image-placeholder.png"
+              id="user-avatar"
               alt="User profile image" />
           </div>
           <div class="user-header__info">
@@ -62,15 +63,27 @@
         <ul class="user-stats">
           <li class="user-stats__single">
             <h4 class="user-stats__header">Repos</h4>
-            <h3 class="user-stats__value">8</h3>
+            <h3
+              class="user-stats__value"
+              id="user-repos">
+              8
+            </h3>
           </li>
           <li class="user-stats__single">
             <h4 class="user-stats__header">Followers</h4>
-            <h3 class="user-stats__value">3938</h3>
+            <h3
+              class="user-stats__value"
+              id="user-followers">
+              3938
+            </h3>
           </li>
           <li class="user-stats__single">
             <h4 class="user-stats__header">Following</h4>
-            <h3 class="user-stats__value">9</h3>
+            <h3
+              class="user-stats__value"
+              id="user-following">
+              9
+            </h3>
           </li>
         </ul>
         <ul class="user-links">
@@ -81,7 +94,11 @@
                 src="../assets/icon-location.svg"
                 alt="Location icon" />
             </div>
-            <span class="user-links__value">San Francisco</span>
+            <span
+              class="user-links__value"
+              id="user-location"
+              >San Francisco</span
+            >
           </li>
           <li class="user-links__single">
             <div class="user-links__icon-wrapper">
@@ -90,7 +107,11 @@
                 src="../assets/icon-website.svg"
                 alt="Website icon" />
             </div>
-            <span class="user-links__value">https://github.blog</span>
+            <span
+              class="user-links__value"
+              id="user-website"
+              >https://github.blog</span
+            >
           </li>
           <li class="user-links__single">
             <div class="user-links__icon-wrapper">
@@ -99,7 +120,11 @@
                 src="../assets/icon-twitter.svg"
                 alt="Twitter icon" />
             </div>
-            <span class="user-links__value">Not Available</span>
+            <span
+              class="user-links__value"
+              id="user-twitter"
+              >Not Available</span
+            >
           </li>
           <li class="user-links__single">
             <div class="user-links__icon-wrapper">
@@ -108,11 +133,16 @@
                 src="../assets/icon-company.svg"
                 alt="Company icon" />
             </div>
-            <span class="user-links__value">@github</span>
+            <span
+              class="user-links__value"
+              id="user-company"
+              >@github</span
+            >
           </li>
         </ul>
       </section>
     </main>
     <script src="./scripts/toggleTheme.js"></script>
+    <script src="./scripts/fetchUser.js"></script>
   </body>
 </html>
