@@ -40,8 +40,9 @@
     display: flex;
     border-radius: 10px;
     background: $lm-light-gray;
-    padding: 18px 28px;
+    padding: 1.125rem 1.75rem;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 
     &__header {
       font-size: 0.6875rem;
@@ -50,12 +51,36 @@
     }
 
     &__value {
-      margin-top: 8px;
+      margin-top: 0.5rem;
       text-align: center;
       font-size: 1rem;
       font-weight: 700;
       color: $lm-navy;
       line-height: 1.5rem;
+    }
+  }
+
+  .user-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+
+    &__single {
+      display: flex;
+      align-items: center;
+    }
+    &__icon-wrapper {
+      display: inline-block;
+      width: 34px;
+    }
+    &__icon {
+      max-width: 20px;
+      max-height: 20px;
+    }
+    &__value {
+      font-size: 0.8125rem;
+      color: $lm-gray-blue;
+      line-height: 1.1875rem;
     }
   }
 }
