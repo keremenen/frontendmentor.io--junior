@@ -33,6 +33,29 @@
     font-size: 0.8125rem;
     line-height: 1.5625rem;
     color: $lm-gray-blue;
-    margin: 32px 0 23px 0;
+    margin: 2rem 0 1.4375rem 0;
+  }
+
+  .user-stats {
+    display: flex;
+    border-radius: 10px;
+    background: $lm-light-gray;
+    padding: 18px 28px;
+    justify-content: space-between;
+
+    &__header {
+      font-size: 0.6875rem;
+      color: $lm-gray-blue;
+      line-height: 1rem;
+    }
+
+    &__value {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $lm-navy;
+      line-height: 1.5rem;
+    }
   }
 }
