@@ -1,0 +1,36 @@
+@use '../abstracts/' as *;
+
+.search-form {
+  margin-top: 2.25rem;
+  background: $lm-white;
+  border-radius: 15px;
+  padding: 0.375rem 0.4375rem 0.4688rem 1rem;
+  display: flex;
+  box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+  align-items: center;
+
+  &__icon {
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+  }
+  &__input {
+    flex-grow: 1;
+    border: none;
+    font-family: inherit;
+    font-size: 0.8125rem;
+    color: $lm-gray-blue;
+    margin: 0.125rem 0.5rem 0 0.4375rem;
+    line-height: 1.5625rem;
+    outline: none;
+  }
+  &__button {
+    font-family: inherit;
+    color: $white;
+    background-color: $lm-blue;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 0.7813rem 0.875rem 0.7813rem 1.125rem;
+    border-radius: 0.625rem;
+  }
+}
