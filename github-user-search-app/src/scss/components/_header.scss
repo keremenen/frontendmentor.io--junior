@@ -22,11 +22,11 @@
       display: flex;
       align-items: center;
       gap: 13px;
-      transition: all 100ms ease-in-out;
+      // transition: color 100ms ease-in-out;
 
       path {
-        transition: all 200ms ease-in-out;
-        transition-delay: 100ms;
+        // transition: fill 200ms ease-in-out;
+        // transition-delay: 100ms;
         fill: themed('toggle-theme');
       }
       &:hover {
