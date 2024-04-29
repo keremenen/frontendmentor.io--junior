@@ -6,19 +6,35 @@
     align-items: center;
 
     &__logo {
-      font-size: 1.625rem;
+      font-size: 26px;
       font-weight: 700;
       color: themed('logo');
-      line-height: 2.375rem;
+      line-height: 38px;
     }
     &__theme-switcher {
-      color: themed('txt-low-contrast');
+      background: none;
+      cursor: pointer;
+      border: none;
+      color: themed('toggle-theme');
       font-weight: 700;
-      font-size: 0.8125rem;
-      letter-spacing: 0.1563rem;
+      font-size: 13px;
+      letter-spacing: 2.5008px;
       display: flex;
       align-items: center;
-      gap: 0.8125rem;
+      gap: 13px;
+      transition: all 0.2s ease-in-out;
+
+      path {
+        transition: all 0.2s ease-in-out;
+        fill: themed('toggle-theme');
+      }
+      &:hover {
+        color: themed('toggle-theme-hover');
+
+        path {
+          fill: themed('toggle-theme-hover');
+        }
+      }
     }
   }
 }
