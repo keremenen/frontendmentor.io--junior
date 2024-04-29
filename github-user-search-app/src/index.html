@@ -11,6 +11,91 @@
       href="./scss/style.scss" />
   </head>
   <body>
-    hello world
+    <main class="container">
+      <header class="header">
+        <h1 class="header__logo">devfinder</h1>
+        <div class="header__theme-switcher">
+          <span>DARK</span>
+          <img
+            src="../assets/icon-moon.svg"
+            alt="Moon icon" />
+        </div>
+      </header>
+      <form class="search-form">
+        <img
+          src="../assets/icon-search.svg"
+          alt="Search icon"
+          class="search-form__icon" />
+        <input
+          type="text"
+          placeholder="Search GitHub username…"
+          class="search-form__input" />
+        <button class="search-form__button">Search</button>
+      </form>
+      <section class="user-section">
+        <header class="user-header">
+          <div class="user-header__image-wrapper">
+            <img
+              src="../assets/user-profile-image-placeholder.png"
+              alt="User profile image" />
+          </div>
+          <div class="user-header__info">
+            <h2 class="user-header__user-name">The Octocat</h2>
+            <h2 class="user-header__user-username">@octocat</h2>
+            <time class="user-header__user-joined-time"
+              >Joined 25 Jan 2011</time
+            >
+          </div>
+        </header>
+        <p class="user-bio">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
+          Quisque volutpat mattis eros.
+        </p>
+        <ul class="user-stats">
+          <li class="user-stats__single">
+            <h4 class="user-stats__header">Repos</h4>
+            <h3 class="user-stats__value">8</h3>
+          </li>
+          <li class="user-stats__single">
+            <h4 class="user-stats__header">Followers</h4>
+            <h3 class="user-stats__value">3938</h3>
+          </li>
+          <li class="user-stats__single">
+            <h4 class="user-stats__header">Following</h4>
+            <h3 class="user-stats__value">9</h3>
+          </li>
+        </ul>
+        <ul class="user-links">
+          <li class="user-links__single">
+            <img
+              class="user-links__icon"
+              src="../assets/icon-location.svg"
+              alt="Location icon" />
+            <span class="user-links__value">San Francisco</span>
+          </li>
+          <li class="user-links__single">
+            <img
+              class="user-links__icon"
+              src="../assets/icon-website.svg"
+              alt="Website icon" />
+            <span class="user-links__value">https://github.blog</span>
+          </li>
+          <li class="user-links__single">
+            <img
+              class="user-links__icon"
+              src="../assets/icon-twitter.svg"
+              alt="Twitter icon" />
+            <span class="user-links__value">Not Available</span>
+          </li>
+          <li class="user-links__single">
+            <img
+              class="user-links__icon"
+              src="../assets/icon-company.svg"
+              alt="Company icon" />
+            <span class="user-links__value">@github</span>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>
