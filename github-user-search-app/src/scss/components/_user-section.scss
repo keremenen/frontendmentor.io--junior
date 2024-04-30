@@ -153,13 +153,10 @@
       gap: 0.875rem;
 
       @include breakpoint(tablet) {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.25rem 3.375rem;
-      }
-
-      @include breakpoint(desktop) {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.25rem 4.0625rem;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 1.125rem;
+        justify-content: space-between;
       }
 
       &__single {
@@ -193,6 +190,7 @@
         font-size: 0.8125rem;
         color: themed('txt-mid-contrast');
         line-height: 1.1875rem;
+        white-space: nowrap;
 
         @include breakpoint(tablet) {
           font-size: 0.9375rem;

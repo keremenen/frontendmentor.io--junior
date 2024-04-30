@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     background: themed('background');
-    padding: 24px;
+    padding: 30px 24px;
 
     @include breakpoint(tablet) {
       min-height: 100vh;
