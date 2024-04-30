@@ -12,66 +12,35 @@ const userRepos = document.querySelector('#user-repos')
 const userFollowers = document.querySelector('#user-followers')
 const userFollowing = document.querySelector('#user-following')
 const userLocation = document.querySelector('#user-location')
+
 const userWebsite = document.querySelector('#user-website')
 const userTwitter = document.querySelector('#user-twitter')
 const userCompany = document.querySelector('#user-company')
 
-const userData = {
-  login: 'keremenen',
-  avatar_url: 'https://avatars.githubusercontent.com/u/131199812?v=4',
-  gravatar_id: '',
-  url: 'https://api.github.com/users/keremenen',
-  html_url: 'https://github.com/keremenen',
-  followers_url: 'https://api.github.com/users/keremenen/followers',
-  following_url:
-    'https://api.github.com/users/keremenen/following{/other_user}',
-  gists_url: 'https://api.github.com/users/keremenen/gists{/gist_id}',
-  starred_url: 'https://api.github.com/users/keremenen/starred{/owner}{/repo}',
-  subscriptions_url: 'https://api.github.com/users/keremenen/subscriptions',
-  organizations_url: 'https://api.github.com/users/keremenen/orgs',
-  repos_url: 'https://api.github.com/users/keremenen/repos',
-  events_url: 'https://api.github.com/users/keremenen/events{/privacy}',
-  received_events_url: 'https://api.github.com/users/keremenen/received_events',
-  type: 'User',
-  site_admin: false,
-  name: 'Przemysław Kitowski',
-  company: null,
-  blog: '',
-  location: null,
-  email: null,
-  hireable: null,
-  bio: null,
-  twitter_username: null,
-  public_repos: 12,
-  public_gists: 0,
-  followers: 0,
-  following: 0,
-  created_at: '2023-04-18T19:00:27Z',
-  updated_at: '2024-04-29T16:32:02Z',
-}
-
 const handleFormSubmit = async (e) => {
   e.preventDefault()
   const inputValue = input.value
-  // const userData = await fetchUserInfo(inputValue)
+  form.classList.remove('search-form__error')
+  const userData = await fetchUserInfo(inputValue)
 
-  updateDOM(userData)
+  userData && updateDOM(userData)
 }
 
 const fetchUserInfo = async (user) => {
   try {
     const response = await fetch(`https://api.github.com/users/${user}`)
-    const userData = await response.json()
 
     if (!response.ok) {
-      console.log('error')
+      form.classList.add('search-form__error')
+      console.log('username not found')
+      return
     }
-
-    updateDOM(userData)
+    const userData = await response.json()
+    return userData
   } catch (error) {
-    console.log(error)
+    console.log('Cant connect to GitHUB API')
+    return
   }
-  return userData
 }
 
 const parseDate = (date) => {
@@ -95,6 +64,14 @@ const checkEmptyUserLinks = () => {
       link.classList.add('user-links__not-available')
     }
   })
+}
+
+const addUserLinks = (userInfo) => {
+  const userWebsiteHref = document.querySelector('#user-link__website')
+  const userTwitterHref = document.querySelector('#user-link__twitter')
+  userInfo.blog && (userWebsiteHref.href = userInfo.blog)
+  userInfo.twitter_username &&
+    (userTwitterHref.href = userInfo.twitter_username)
 }
 
 const updateDOM = (userInfo) => {
@@ -140,6 +117,7 @@ const updateDOM = (userInfo) => {
     ? (userCompany.innerText = userInfo.company)
     : (userCompany.innerText = 'Not Available')
 
+  addUserLinks(userInfo)
   checkEmptyUserLinks()
 }
 

@@ -97,7 +97,7 @@
 
       @include breakpoint(desktop) {
         font-size: 0.9375rem;
-        margin: 0.9375rem 0 0.4375rem;
+        margin: 15px 0 30px;
       }
     }
 
@@ -162,6 +162,7 @@
       &__not-available {
         opacity: 0.5;
         transition: none;
+        cursor: not-allowed;
       }
 
       &__single {
