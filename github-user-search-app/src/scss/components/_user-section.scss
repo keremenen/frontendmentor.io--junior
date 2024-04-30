@@ -9,6 +9,11 @@
     @include breakpoint(tablet) {
       padding: 2.5rem;
     }
+    @include breakpoint(desktop) {
+      padding: 50px;
+      position: relative;
+      padding-left: 202px;
+    }
 
     .user-header {
       display: flex;
@@ -28,6 +33,11 @@
         @include breakpoint(tablet) {
           width: 7.3125rem;
           height: 7.3125rem;
+        }
+        @include breakpoint(desktop) {
+          position: absolute;
+          left: 3rem;
+          top: 3rem;
         }
 
         img {
@@ -61,8 +71,15 @@
         line-height: 1.1875rem;
         color: themed('txt-low-contrast');
         font-size: 0.8125rem;
+
         @include breakpoint(tablet) {
           font-size: 0.9375rem;
+        }
+
+        @include breakpoint(desktop) {
+          position: absolute;
+          right: 3rem;
+          top: 3.375rem;
         }
       }
     }
@@ -74,8 +91,13 @@
       margin: 2rem 0 1.4375rem 0;
 
       @include breakpoint(tablet) {
-        font-size: 15px;
+        font-size: 0.9375rem;
         margin: 1.4375rem 0 2rem 0;
+      }
+
+      @include breakpoint(desktop) {
+        font-size: 0.9375rem;
+        margin: 0.9375rem 0 0.4375rem;
       }
     }
 
@@ -90,6 +112,9 @@
       @include breakpoint(tablet) {
         padding: 1rem 1.5rem 1.3125rem 1.9375rem;
         margin-bottom: 2rem;
+      }
+      @include breakpoint(desktop) {
+        margin-bottom: 2.375rem;
       }
 
       &__single {
@@ -129,8 +154,12 @@
 
       @include breakpoint(tablet) {
         grid-template-columns: 1fr 1fr;
-        row-gap: 1.25rem;
-        column-gap: 3.375rem;
+        gap: 1.25rem 3.375rem;
+      }
+
+      @include breakpoint(desktop) {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem 4.0625rem;
       }
 
       &__single {
