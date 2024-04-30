@@ -1,4 +1,19 @@
 @use 'variables' as *;
+$mobile: 30rem;
+$tablet: 48rem;
+$desktop: 62rem;
+
+$breakpoints: (
+  'mobile': $mobile,
+  'tablet': $tablet,
+  'desktop': $desktop,
+);
+
+@mixin breakpoint($device) {
+  @media (min-width: map-get($breakpoints, $device)) {
+    @content;
+  }
+}
 
 @mixin themify($themes) {
   @each $name, $values in $themes {

@@ -9,9 +9,19 @@
     box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
     align-items: center;
 
+    @include breakpoint(tablet) {
+      padding: 0.5625rem 0.625rem 0.6563rem 2rem;
+      margin: 36px 0 24px;
+    }
+
     &__icon {
       max-width: 1.25rem;
       max-height: 1.25rem;
+
+      @include breakpoint(tablet) {
+        max-height: 1.5rem;
+        max-width: 1.5rem;
+      }
     }
     &__input {
       flex-grow: 1;
@@ -23,6 +33,11 @@
       line-height: 1.5625rem;
       outline: none;
       background: none;
+
+      @include breakpoint(tablet) {
+        font-size: 1.125rem;
+        margin: 0rem 0.5rem 0 1.3125rem;
+      }
     }
     &__button {
       font-family: inherit;
@@ -34,6 +49,12 @@
       padding: 0.7813rem 0.875rem 0.7813rem 1.125rem;
       border-radius: 0.625rem;
       cursor: pointer;
+
+      @include breakpoint(tablet) {
+        min-height: 3.125rem;
+        font-size: 1rem;
+        width: 6.625rem;
+      }
 
       &:hover {
         background: themed('primary-hover');

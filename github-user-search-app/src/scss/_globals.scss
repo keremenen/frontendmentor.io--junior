@@ -18,7 +18,11 @@
 
   .container {
     max-width: 20.4375rem;
-    margin: 31px 24px;
+    margin: 1.9375rem 1.5rem;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      max-width: 35.8125rem;
+    }
   }
 }

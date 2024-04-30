@@ -17,16 +17,20 @@
       border: none;
       color: themed('toggle-theme');
       font-weight: 700;
-      font-size: 13px;
       letter-spacing: 2.5008px;
       display: flex;
       align-items: center;
       gap: 13px;
       transition: color 10ms ease-in-out;
 
+      span {
+        font-size: 13px;
+      }
+
+      @include breakpoint(desktop) {
+      }
+
       path {
-        // transition: fill 200ms ease-in-out;
-        // transition-delay: 100ms;
         fill: themed('toggle-theme');
       }
       &:hover {
