@@ -58,6 +58,9 @@ const parseDate = (date) => {
 
 const checkEmptyUserLinks = () => {
   const userLinks = document.querySelectorAll('.user-links__single')
+  userLinks.forEach((link) =>
+    link.classList.remove('user-links__not-available')
+  )
 
   userLinks.forEach((link) => {
     if (link.innerText === 'Not Available') {
