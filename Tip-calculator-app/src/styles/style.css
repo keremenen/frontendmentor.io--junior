@@ -34,3 +34,11 @@ input::-webkit-inner-spin-button {
 .full-width-input {
   @apply appearance-auto text-right w-full bg-very-light-grayish-cyan text-very-dark-cyan leading-12 min-h-6 font-bold rounded-[5px] text-2xl px-[1.1rem] bg-no-repeat bg-[center_left_1.2rem] outline-strong-cyan outline-2;
 }
+
+.error {
+  @apply border-2 border-[#E17457];
+}
+
+.selected {
+  @apply bg-strong-cyan;
+}

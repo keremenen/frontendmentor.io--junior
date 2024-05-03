@@ -21,7 +21,9 @@
       </div>
       <section
         class="container mx-auto bg-white p-8 rounded-t-[25px] flex flex-col md:max-w-[57.5rem] md:flex-row md:justify-between md:gap-6 md:rounded-[25px]">
-        <div class="md:w-full md:ml-4 md:py-[.8125rem] md:max-w-[379px]">
+        <form
+          class="md:w-full md:ml-4 md:py-[.8125rem] md:max-w-[379px]"
+          id="splitter-form">
           <div class="mb-8 md:mb-10">
             <h2 class="text-base font-bold text-dark-grayish-cyan mb-[6px]">
               Bill
@@ -29,6 +31,7 @@
             <input
               class="full-width-input bg-dollar-icon"
               type="number"
+              id="bill"
               placeholder="0" />
           </div>
           <div class="mb-8 md:mb-10">
@@ -36,14 +39,35 @@
               Select Tip %
             </h2>
             <div class="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3">
-              <button class="button">5%</button>
-              <button class="button">10%</button>
-              <button class="button">15%</button>
-              <button class="button">25%</button>
-              <button class="button">50%</button>
+              <button
+                class="button"
+                value="5">
+                5%
+              </button>
+              <button
+                class="button"
+                value="10">
+                10%
+              </button>
+              <button
+                class="button"
+                value="15">
+                15%
+              </button>
+              <button
+                class="button"
+                value="25">
+                25%
+              </button>
+              <button
+                class="button"
+                value="50">
+                50%
+              </button>
               <input
                 class="custom-input"
                 type="nuber"
+                id="custom-tip-percent"
                 placeholder="Custom" />
             </div>
           </div>
@@ -54,18 +78,27 @@
             <input
               class="full-width-input bg-user-icon"
               type="number"
+              id="number-of-people"
               placeholder="0" />
           </div>
-        </div>
+        </form>
         <div
           class="rounded-2xl bg-very-dark-cyan p-6 pt-9 md:w-full md:flex md:flex-col md:p-10 md:max-w-[25.8125rem] md:min-h-[26.0625rem]">
           <div class="flex justify-between mb-5 md:mb-8">
             <h3 class="summary-entry">Tip Amount</h3>
-            <span class="summary-value">$4.27</span>
+            <span
+              class="summary-value"
+              id="tip-per-person"
+              >$0.00</span
+            >
           </div>
           <div class="flex justify-between mb-5">
             <h3 class="summary-entry">Total</h3>
-            <span class="summary-value">$4.27</span>
+            <span
+              class="summary-value"
+              id="total-per-person"
+              >$4.27</span
+            >
           </div>
           <button
             class="uppercase bg-strong-cyan text-xl font-bold w-full h-12 rounded-[5px] text-very-dark-cyan hover:bg-[#9FE8DF] mt-4 md:mt-auto">
@@ -74,5 +107,6 @@
         </div>
       </section>
     </main>
+    <script src="./scripts/splitter.js"></script>
   </body>
 </html>
