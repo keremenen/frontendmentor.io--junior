@@ -11,7 +11,69 @@
       href="./styles/style.css"
       type="text/css" />
   </head>
-  <body>
-    <p class="underline text-2xl">Hello world</p>
+  <body class="bg-light-grayish-cyan font-body">
+    <main>
+      <div class="flex justify-center items-center h-36 pt-[10px]">
+        <img
+          src="../assets/images/logo.svg"
+          alt="Splitter logo" />
+      </div>
+      <section
+        class="container mx-auto bg-white p-8 rounded-t-[25px] flex flex-col">
+        <div>
+          <div class="mb-8">
+            <h2 class="text-base font-bold text-dark-grayish-cyan mb-[6px]">
+              Bill
+            </h2>
+            <input
+              class="appearance-auto text-right w-full bg-very-light-grayish-cyan text-very-dark-cyan leading-12 min-h-6 font-bold rounded-[5px] text-2xl px-[1.1rem] bg-dollar-icon bg-no-repeat bg-[center_left_1.2rem]"
+              type="number"
+              value="142.55" />
+          </div>
+          <div class="mb-8">
+            <h2 class="text-base font-bold text-dark-grayish-cyan mb-[6px]">
+              Select Tip %
+            </h2>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <button class="button">5%</button>
+              <button class="button">10%</button>
+              <button class="button">15%</button>
+              <button class="button">25%</button>
+              <button class="button">50%</button>
+              <button class="button-secondary">Custom</button>
+            </div>
+          </div>
+          <div class="mb-8">
+            <h2 class="text-base font-bold text-dark-grayish-cyan mb-[6px]">
+              Number of People
+            </h2>
+            <input
+              class="appearance-auto text-right w-full bg-very-light-grayish-cyan text-very-dark-cyan leading-12 min-h-6 font-bold rounded-[5px] text-2xl px-[1.1rem] bg-user-icon bg-no-repeat bg-[center_left_1.2rem]"
+              type="number"
+              value="5" />
+          </div>
+        </div>
+        <div class="rounded-2xl bg-very-dark-cyan p-6 pt-9">
+          <div class="flex justify-between mb-5">
+            <h3
+              class="text-base font-bold mt-1 text-white relative after:content-['\002f\00a0person'] after:absolute after:left-0 after:top-[21px] after:text-grayish-cyan after:text-[13px] after:font-bold">
+              Tip Amount
+            </h3>
+            <span class="text-[2rem] text-strong-cyan font-bold">$4.27</span>
+          </div>
+          <div class="flex justify-between mb-5">
+            <h3
+              class="text-base font-bold mt-1 text-white relative after:content-['\002f\00a0person'] after:absolute after:left-0 after:top-[21px] after:text-grayish-cyan after:text-[13px] after:font-bold">
+              Total
+            </h3>
+            <span class="text-[2rem] text-strong-cyan font-bold">$4.27</span>
+          </div>
+          <button
+            class="uppercase bg-strong-cyan text-xl font-bold w-full h-12 rounded-[5px] text-very-dark-cyan hover:bg-[#9FE8DF] mt-4">
+            reset
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
