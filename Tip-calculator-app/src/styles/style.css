@@ -22,3 +22,11 @@ input::-webkit-inner-spin-button {
 .button-secondary {
   @apply text-2xl font-bold rounded-[5px] hover:bg-strong-cyan hover:text-very-dark-cyan leading-12 w-full bg-very-light-grayish-cyan text-[#547878];
 }
+
+.summary-entry {
+  @apply text-base font-bold mt-1 text-white relative after:content-['\002f\00a0person'] after:absolute after:left-0 after:top-[21px] after:text-grayish-cyan after:text-[13px] after:font-bold md:mt-4;
+}
+
+.summary-value {
+  @apply text-[2rem] text-strong-cyan font-bold md:text-5xl md:mt-[13px];
+}
