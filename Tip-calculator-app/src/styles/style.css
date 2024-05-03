@@ -19,8 +19,8 @@ input::-webkit-inner-spin-button {
 .button {
   @apply text-2xl font-bold rounded-[5px] hover:bg-strong-cyan hover:text-very-dark-cyan leading-12 w-full bg-very-dark-cyan text-white;
 }
-.button-secondary {
-  @apply text-2xl font-bold rounded-[5px] hover:bg-strong-cyan hover:text-very-dark-cyan leading-12 w-full bg-very-light-grayish-cyan text-[#547878];
+.custom-input {
+  @apply text-2xl font-bold rounded-[5px]  cursor-pointer leading-12 w-full bg-very-light-grayish-cyan text-[#547878] text-center outline-strong-cyan outline-2;
 }
 
 .summary-entry {
